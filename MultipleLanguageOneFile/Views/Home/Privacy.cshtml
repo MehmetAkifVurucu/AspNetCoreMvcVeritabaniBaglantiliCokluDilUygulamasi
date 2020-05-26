@@ -1,0 +1,12 @@
+﻿@using MultipleLanguageOneFile.Resources
+
+@inject LocService SharedLocalizer
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+
+Mesaj
+<h1>@SharedLocalizer.GetLocalizedHtmlString("gizlilikSayfasiMesaj")</h1>
+
+

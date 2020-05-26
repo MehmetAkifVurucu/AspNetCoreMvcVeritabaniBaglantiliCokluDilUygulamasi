@@ -1,0 +1,30 @@
+﻿@using MultipleLanguageOneFile.Resources
+
+@inject LocService SharedLocalizer
+@model IEnumerable<MultipleLanguageDynamicContent.Models.Makale>;
+@{
+    ViewData["Title"] = "MakaleListesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@SharedLocalizer.GetLocalizedHtmlString("makaleListeSayfasi")</h1>
+@if (Model != null)
+{
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Baslik
+                </td>
+                <td>
+                    @item.Aciklama
+                </td>
+            </tr>
+        }
+    </table>
+}
+

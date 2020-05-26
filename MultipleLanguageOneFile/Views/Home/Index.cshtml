@@ -1,0 +1,14 @@
+﻿@using MultipleLanguageOneFile.Resources
+
+@inject LocService SharedLocalizer
+
+@{
+    ViewData["Ad"] = @SharedLocalizer.GetLocalizedHtmlString("ad");
+    ViewData["Soyad"] = @SharedLocalizer.GetLocalizedHtmlString("soyad");
+
+}
+@ViewData["Ad"]
+@ViewData["Soyad"]
+<div class="text-center">
+    <h1 class="display-4">@SharedLocalizer.GetLocalizedHtmlString("anasayfaMesaj")</h1>
+</div>
